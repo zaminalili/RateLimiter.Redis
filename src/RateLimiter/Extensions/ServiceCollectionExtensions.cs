@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using RateLimiter.Configure;
 using RateLimiter.Middlewares;
 using RateLimiter.Services.Abstract;
@@ -18,5 +19,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<RateLimiterMiddleware>();
 
         return services;
+    }
+
+    public static IApplicationBuilder UseRateLimiter(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<RateLimiterMiddleware>();
     }
 }
