@@ -15,6 +15,7 @@ public static class ServiceCollectionExtensions
 
         services.AddStackExchangeRedisCache(opt => opt.Configuration = connectionString);
 
+        services.AddMemoryCache();
         services.AddScoped<IRateLimiterService, RateLimiterService>();
         services.AddScoped<RateLimiterMiddleware>();
 
