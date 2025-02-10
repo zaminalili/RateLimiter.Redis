@@ -13,7 +13,7 @@ This library helps protect your API from excessive requests by implementing rate
 
 Install the package from NuGet:
 ```
-dotnet add package RateLimiter.Redis
+dotnet add package RateLimiter.AspNetCore
 ```
 
 Add the rate limiter services in `Program.cs`:
