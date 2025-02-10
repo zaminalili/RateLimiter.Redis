@@ -4,7 +4,37 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>$(AssemblyName).AspNetCore</PackageId>
+    <Title>IP-based Rate Limiter for ASP.NET Core using Redis</Title>
+    <Authors>zaminalili</Authors>
+    <Product>$(AssemblyName).AspNetCore</Product>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/zaminalili/RateLimiter.Redis</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>RedisRateLimiter.AspNetCore is a NuGet package that provides an IP-based Rate Limiting mechanism for ASP.NET Core applications. It uses a Redis and local caching.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>IP-based rate limiting to control excessive API requests.
+Customizable rate limiting policies based on request limits and time windows.
+Easy integration with ASP.NET Core middleware.</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
