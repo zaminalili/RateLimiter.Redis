@@ -1,7 +1,7 @@
 # RateLimiter.Redis
 This library helps protect your API from excessive requests by implementing rate limiting with Redis (or local caching).
 
-![presantation](./presentation.gif)
+![presantation](https://github.com/zaminalili/RateLimiter.Redis/blob/main/presentation.gif)
 
 ## Features
 
